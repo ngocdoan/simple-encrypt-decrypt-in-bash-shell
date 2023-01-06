@@ -10,7 +10,7 @@ ls -l
 echo "Please enter the file to encrypt:"
 read FILE
 # Encrypt the file
-openssl enc -aes-256-cbc -pbkdf2 -salt -in $FILE -out $FILE.encrypt.txt -k $PASSWORD
+openssl enc -aes-256-cbc -pbkdf2 -salt -in $FILE -out $FILE.encrypted -k $PASSWORD
 echo "File encrypted successfully!"
 }
 
@@ -25,7 +25,7 @@ ls -l
 echo "Please enter the file to decrypt:"
 read FILE
 # Decrypt the file
-openssl enc -aes-256-cbc -pbkdf2 -d -in $FILE -out $FILE.decrypted.txt -k $password
+openssl enc -aes-256-cbc -pbkdf2 -d -in $FILE -out $FILE.decrypted -k $password
 echo "File decrypted successfully!"
 }
 ############################################################
